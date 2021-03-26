@@ -1,0 +1,479 @@
+<div class="bg" style="height: calc(100vh);">
+  <div class="wrapper">
+    <div class="section">
+      <div class="section-left">
+        <form class="input-fields">
+          <img style="align-items: center; justify-content: center;" height="80%" width="80%" src='/assets/logo.png'>
+
+          <h3 style="position: center; font-weight: bold;">Wound Evaluation Form</h3>
+          <input type="initial" id="initial" placeholder="Date" value="{{TodayDate | date}}">
+          <input type="initial" id="initial" placeholder="Clinic Name">
+          <input type="initial" id="initial" placeholder="Patient Full Name">
+          <input type="id" id="id" name="id" placeholder="Patient EMR">
+          <label for="age">Age:
+            <input style="width: 64%;" type="age" id="age" name="age" value="27">
+          </label>
+          <label for="sex">Sex:
+            <input style="width: 68%;" type="age" id="age" name="age" value="">
+          </label>
+        </form>
+      </div>
+      <div class="section-right">
+        <mat-tab-group style="margin-left: 3%; margin-right: 3%;">
+          <mat-tab label="Patient Details">
+            <div style="padding-top: 2%;">
+              <form>
+                <label for="BMI">BMI:
+                  <input style="width: 20%; padding-left: 5%;" type="BMI" id="BMI" name="BMI" value="29">
+                </label>
+                <label for="PAD">PAD:
+                  <mat-slide-toggle></mat-slide-toggle>
+                </label>
+                <label for="PVD">PVD:
+                  <mat-slide-toggle></mat-slide-toggle>
+                </label>
+                <label for="smoke">Smoker:
+                  <mat-slide-toggle></mat-slide-toggle>
+                </label>
+                <label for="Diabetic">Diabetic:
+                  <mat-slide-toggle></mat-slide-toggle>
+                </label>
+              </form>
+              <label for="type">Type:
+                <input type="type" id="type" name="type"> </label><br>
+              <label for="history">Any other relevant medical history:
+                <input type="type" id="type" name="type"></label>
+            </div>
+          </mat-tab>
+          <mat-tab label="Assessment Form">
+            <mat-tab-group>
+              <mat-tab label="Wound Type">
+                <div style="padding-top: 1%; align-content:flex-start;">
+                  <form>
+                    <label for="ulcer">Leg Ulcer:
+                      <label for="venous">Venous
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="arterial">Arterial
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="Mixed">Mixed
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="pressure">Pressure Injury
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="grade">Grade:
+                        <input style="width: 170px;" type="type" id="grade" name="grade"></label>
+                      <label for="footulcer">Diabetic Foot Ulcer:
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="grade">Other (Please State):
+                        <input style="width: 484px;" type="type" id="grade" name="grade"></label>
+                    </label>
+
+                  </form>
+                </div>
+              </mat-tab>
+              <mat-tab label="Wound Details">
+                <div style="padding-top: 1%;">
+                  <form>
+                    <label for="size">Wound Size (cm)
+                      <label for="length">Length:
+                        <input style="width: 101px;" type="type" id="length" name="length"></label>
+                      <label for="width">Width:
+                        <input style="width: 101px;" type="type" id="width" name="width"></label>
+                      <label for="area">Total Area:
+                        <input style="width: 100px;" type="type" id="area" name="area"></label>
+                      <label for="depth">Depth:
+                        <input style="width: 100px;" type="type" id="depth" name="depth"></label>
+                      <label for="time">Duration:
+                        <input style="width: 190px;" type="type" id="time" name="time"></label>
+                      <label for="loc">Location:
+                        <input style="width: 450px;" type="type" id="loc" name="loc"></label>
+                    </label>
+
+                  </form>
+                </div>
+              </mat-tab>
+              <mat-tab label="Wound Tissue / Surrounding Skin Description">
+                <div style="padding-top: 1%;">
+                  <form>
+                    <label for="static">Static:
+                      <input type="checkbox" id="static" name="static" value="static"></label>
+                    <label for="clean">Clean:
+                      <input type="checkbox" id="clean" name="clean" value="clean"></label>
+                    <label for="sloughly">Sloughly:
+                      <input type="checkbox" id="sloughly" name="sloughly" value="sloughly"></label>
+                    <label for="dusky">Dusky:
+                      <input type="checkbox" id="dusky" name="dusky" value="dusky"></label>
+                    <label for="friable">Friable:
+                      <input type="checkbox" id="friable" name="friable" value="friable"></label>
+                    <label for="mac">Macerated:
+                      <input type="checkbox" id="mac" name="mac" value="mac"></label>
+                    <label for="exc">Excoriated:
+                      <input type="checkbox" id="exc" name="exc" value="exc"></label>
+                    <label for="pain">Painful:
+                      <input type="checkbox" id="pain" name="pain" value="pain"></label>
+                    <label for="grade">Other (Please State):
+                      <input style="width: 630px;" type="type" id="grade" name="grade"></label>
+                    <label for="recurrent">Is this wound a recurrent wound?
+                      <mat-slide-toggle></mat-slide-toggle>
+                    </label> <br>
+                    <label for="regime">Previous dressing regime:
+                      <input style="max-width: fit-content;" type="type" id="regime" name="regime"></label>
+                    <label for="regime">Previous therapy/treatment:
+                      <input style="max-width: fit-content;" type="type" id="regime" name="regime"></label>
+                    <label for="regime">Previous clinician / Clinic Name:
+                      <input style="max-width: fit-content;" type="type" id="regime" name="regime"></label>
+                  </form>
+                </div>
+              </mat-tab>
+              <mat-tab label="Previous Management">
+                <div>
+                  <form>
+
+                    <label for="dress">Frequency of dressing changes
+                      <label for="dress">Weekly
+                        <input type="radio" id="Weekly" name="dress" value="Weekly"></label>
+                      <label for="dress">2x weekly
+                        <input type="radio" id="norec" name="dress" value="2x"></label>
+                      <label for="dress">3x weekly
+                        <input type="radio" id="Weekly" name="dress" value="3x"></label>
+                      <label for="dress">Daily
+                        <input type="radio" id="norec" name="dress" value="daily"></label>
+                      <br>
+                      <label for="score">Pain Score: {{gridsize.value}}
+                        <mat-slider #gridsize [thumbLabel]="true" (change)="updateSetting($event)" step="1" min="0"
+                          max="10" [value]="gridsize"></mat-slider>
+                      </label> <br>
+                      <label for="regime">Analgesics:
+                        <input type="type" id="analgesics" name="analgesic"></label>
+                      <label for="regime">Any additional Information
+                        <input type="type" id="regime" name="regime"></label><br>
+
+                      <button class="button" [disabled]="false">Save</button>
+                    </label>
+                  </form>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-tab>
+          <mat-tab label="Clinical Feedback">
+            <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+              <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+                <div style="padding-top: 1%;">
+                  <form>
+                    <label for="date"> Date: {{TodayDate | date}} </label>
+                    <label style="margin-left: 3%;" for=" healed">Has the wound healed?
+                      <mat-slide-toggle ngDefaultControl (change)="onChangeWoundHeal($event)">
+                      </mat-slide-toggle>
+                    </label>
+                    <label style="margin-left: 3%;" for="improve">If no. Is there any signs of improvement?
+                      <mat-slide-toggle></mat-slide-toggle>
+                    </label><br>
+                    <label for="regime">Give details: </label>
+                    <input style="width: 50%;" type="type" id="regime" name="regime"><br>
+                    <label for="size">Wound Size (cm)</label>
+                    <label for="length">Length:</label>
+                    <input style="width: 10%;" type="type" id="length" name="length">
+                    <label for="width">Width:</label>
+                    <input style="width: 10%;" type="type" id="width" name="width">
+                    <label for="area">Total Area:</label>
+                    <input style="width: 10%;" type="type" id="area" name="area">
+                    <label for="depth">Depth:</label>
+                    <input style="width: 10%;" type="type" id="depth" name="depth">
+                    <br>
+                    <label for="regime">Secondary dressing utilised:</label>
+                    <input style="width: 50%;" type="type" id="regime" name="regime">
+                    <br>
+                    <label for="dress">Frequency of dressing changes:
+                      <label for="dress">Weekly
+                        <input type="radio" id="Weekly" name="dress" value="Weekly"></label>
+                      <label for="dress">2x weekly
+                        <input type="radio" id="norec" name="dress" value="2x"></label>
+                      <label for="dress">3x weekly
+                        <input type="radio" id="Weekly" name="dress" value="3x"></label>
+                      <label for="dress">Daily
+                        <input type="radio" id="norec" name="dress" value="daily"></label>
+                      <br>
+                      <label for="score" style="margin-right: 10%;">Pain Score: {{gridsize.value}}
+                        <mat-slider style="margin-left: 10%;" #gridsize [thumbLabel]="true"
+                          (change)="updateSetting($event)" step="1" min="0" max="10" [value]="gridsize"></mat-slider>
+                        <label for="regime">Analgesics:</label>
+                      </label>
+                      <input type="type" id="analgesics" name="analgesic"><br>
+                    </label>
+                  </form>
+                  <button mat-raised-button [disabled]="false" class="button" (click)="addTab($event)">
+                    Submit
+                  </button>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-tab>
+          <mat-tab label="Final Feedback">
+            <div style="padding-top: 1%;">
+              <mat-tab-group>
+                <mat-tab label="Wound Details">
+                  <div style="padding-top: 1%;">
+
+                    <form>
+                      <label style="margin-right: 2%;" for="date"> Date of completion: {{TodayDate | date}}</label>
+                      <label for=" healed">Has the wound healed?
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <br>
+                      <label for="improve">If no. Is there any signs of improvement?
+                        <mat-slide-toggle></mat-slide-toggle>
+                      </label>
+                      <label for="regime">Give details:
+                        <input style="width: 664px;" type="type" id="regime" name="regime"></label><br>
+                      <label for="size">Wound Size (cm)</label>
+                      <label for="length">Length:</label>
+                      <input style="width: 98px;" type="type" id="length" name="length">
+                      <label for="width">Width:</label>
+                      <input style="width: 98px;" type="type" id="width" name="width">
+                      <label for="area">Total Area:</label>
+                      <input style="width: 98px;" type="type" id="area" name="area">
+                      <label for="depth">Depth:</label>
+                      <input style="width: 98px;" type="type" id="depth" name="depth"><br>
+                      <label for="regime">Secondary dressing Utilised:</label>
+                      <input style="width: 569px;" type="type" id="regime" name="regime"><br>
+                      <label style="" for="dress">Frequency of dressing changes:
+                        <label for="dress">Weekly
+                          <input type="radio" id="Weekly" name="dress" value="Weekly"></label>
+                        <label for="dress">2x weekly
+                          <input type="radio" id="norec" name="dress" value="2x"></label>
+                        <label for="dress">3x weekly
+                          <input type="radio" id="Weekly" name="dress" value="3x"></label>
+                        <label for="dress">Daily
+                          <input type="radio" id="norec" name="dress" value="daily"></label>
+                        <br>
+
+                        <label for="score">Pain Score: {{gridsize.value}}
+                          <mat-slider #gridsize [thumbLabel]="true" (change)="updateSetting($event)" step="1" min="0"
+                            max="10" [value]="gridsize"></mat-slider>
+                        </label>
+                        <label for="regime">Analgesics:
+                          <input type="type" id="analgesics" name="analgesic"> </label>
+                      </label>
+
+                    </form>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Wound Tissue / Surrounding Skin Description">
+                  <label for="static">Static:
+                    <input type="checkbox" id="static" name="static" value="static"></label>
+                  <label for="clean">Clean:
+                    <input type="checkbox" id="clean" name="clean" value="clean"></label>
+                  <label for="sloughly">Sloughly:
+                    <input type="checkbox" id="sloughly" name="sloughly" value="sloughly"></label>
+                  <label for="dusky">Dusky:
+                    <input type="checkbox" id="dusky" name="dusky" value="dusky"></label>
+                  <label for="friable">Friable:
+                    <input type="checkbox" id="friable" name="friable" value="friable"></label>
+                  <label for="mac">Macerated:
+                    <input type="checkbox" id="mac" name="mac" value="mac"></label>
+                  <label for="exc">Excoriated:
+                    <input type="checkbox" id="exc" name="exc" value="exc"></label>
+                  <label for="pain">Painful:
+                    <input type="checkbox" id="pain" name="pain" value="pain"></label><br>
+                  <label for="other">Other (Please State):
+                    <input style="width: 610px;" type="type" id="other" name="other"></label><br><br>
+                </mat-tab>
+                <mat-tab label="Practicalities of NATROX">
+                  <form>
+                    <h3>Please feedback on the practicalities of NATROX</h3>
+                    <h5>On a scale of 1-5 with 1 being the dressing performed badly and 5 the dressing performed well.
+                      Please rate the following aspects:</h5>
+                    <table>
+                      <tr style="align-items:center;">
+                        <th></th>
+                        <th style="align-items:center;">1</th>
+                        <th style="align-items:center;">2</th>
+                        <th style="align-items:center;">3</th>
+                        <th style="align-items:center;">4</th>
+                        <th style="align-items:center;">5</th>
+                        <th style="align-items:center;">N/A</th>
+                      </tr>
+                      <tr>Ease of application
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="easapp" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="easapp" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="easapp" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="easapp" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="easapp" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="easapp" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Ability to manage the wound effectively
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="eff" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="eff" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="eff" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="eff" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="eff" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="eff" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Ease of battery management by the patient
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="eas" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="eas" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="eas" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="eas" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="eas" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="eas" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Conformity to the wound bed
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="bed" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="bed" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="bed" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="bed" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="bed" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="bed" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Acceptancy of therapy by the patient
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="acc" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="acc" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="acc" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="acc" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="acc" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="acc" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Patient comfort
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="com" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="com" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="com" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="com" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="com" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="com" value="N/a">
+                        </td>
+                      </tr>
+                      <tr>Overall impression
+                        <td style="align-items:center;">
+                          <input type="radio" id="1" name="over" value="1">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="2" name="over" value="2">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="3" name="over" value="3">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="4" name="over" value="4">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="5" name="over" value="5">
+                        </td>
+                        <td style="align-items:center;">
+                          <input type="radio" id="0" name="over" value="N/a">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </mat-tab>
+                <mat-tab label="Final Survey">
+                  <form>
+                    <label for="improve">During treatment with NATROX did the patient develop an infection?
+                      <mat-slide-toggle></mat-slide-toggle>
+                    </label>
+
+                    <br>
+                    <label for="improve">During treatment with NATROX did the patient experience any issue?
+                      <mat-slide-toggle></mat-slide-toggle>
+                    </label>
+
+                    <br>
+                    <label for="stop">If you had to stop therapy for any reason please detail:
+                      <input style="width: 50%" type="type" id="stop" name="stop"></label><br>
+                    <label for="comm">Additional Comments:
+                      <input style="width: 50%" type="type" id="comm" name="comm"></label>
+
+                    <label for="improve">Based on your experience would you recommend NATROX for formulary inclusion?
+                      <mat-slide-toggle></mat-slide-toggle>
+                    </label>
+                  </form>
+                </mat-tab>
+              </mat-tab-group>
+            </div>
+          </mat-tab>
+          <mat-tab label="Evaluation Check List">
+            <div style="padding-top: 1%;">
+              <form>
+
+              </form>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>
